@@ -1,0 +1,99 @@
+<svg viewBox="0 0 960 400" role="img" aria-labelledby="arch-t arch-d" xmlns="http://www.w3.org/2000/svg" class="dg ch" width="960" height="400">
+<style>
+:root{--bg:#F3F2EE;--fg:#1D1F22;--muted:#5E636A;--line:#D9D7D0;--card:#FFFFFF;--accent:#2E6F68;--flag:#B4543C;
+--f-head:"Schibsted Grotesk","Segoe UI",system-ui,sans-serif;--f-body:"Source Serif 4",Georgia,serif;--f-mono:"JetBrains Mono",ui-monospace,Consolas,monospace;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141617;--fg:#E4E4DF;--muted:#9AA0A6;--line:#2C2F32;--card:#1C1F21;--accent:#7FC3B9;--flag:#E58A6E;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#141617;--fg:#E4E4DF;--muted:#9AA0A6;--line:#2C2F32;--card:#1C1F21;--accent:#7FC3B9;--flag:#E58A6E;color-scheme:dark}
+.bgfill{fill:var(--card)}
+.dg .grp{fill:none;stroke:var(--line);stroke-width:1.5}
+.dg .grp-c{fill:var(--flag);fill-opacity:.06;stroke:var(--flag);stroke-width:1.5;stroke-dasharray:6 5}
+.dg .grp-l{fill:var(--accent);fill-opacity:.06;stroke:var(--accent);stroke-width:1.5}
+.dg .grp-m{fill:var(--muted);fill-opacity:.08;stroke:var(--muted);stroke-width:1.5;stroke-dasharray:4 4}
+.dg .bx{fill:var(--bg);stroke:var(--line);stroke-width:1.2}
+.dg .bx-a{fill:var(--accent);fill-opacity:.14;stroke:var(--accent);stroke-width:1.5}
+.dg .bx-c{fill:var(--flag);fill-opacity:.08;stroke:var(--flag);stroke-width:1.4;stroke-dasharray:5 4}
+.dg .lane{fill:var(--bg);fill-opacity:.5;stroke:var(--line);stroke-width:1}
+.dg .lane2{fill:none;stroke:var(--line);stroke-width:1}
+.dg text{font-family:var(--f-head);fill:var(--fg)}
+.dg .tt{font-size:15px;font-weight:700}
+.dg .t{font-size:13.5px;font-weight:600}
+.dg .ts{font-family:var(--f-mono);font-size:11px;fill:var(--muted)}
+.dg .tc{fill:var(--flag)}
+.dg .ta{fill:var(--accent)}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .ln{fill:none;stroke:var(--muted);stroke-width:1.5}
+.dg .ln-a{fill:none;stroke:var(--accent);stroke-width:1.6}
+.dg .ln-c{fill:none;stroke:var(--flag);stroke-width:1.6;stroke-dasharray:6 4}
+.dg .mk{fill:var(--muted)}
+.dg .mk-a{fill:var(--accent)}
+.dg .mk-c{fill:var(--flag)}
+.ch text{font-family:var(--f-head);fill:var(--muted);font-size:11.5px}
+.ch .tk{font-family:var(--f-mono)}
+.ch .lb{font-weight:600}
+.ch .mid{text-anchor:middle}
+.ch .end{text-anchor:end}
+.ch .gd{fill:none;stroke:var(--line);stroke-width:1}
+.ch .ax{fill:none;stroke:var(--muted);stroke-width:1}
+.ch .tr{fill:none;stroke:var(--muted);stroke-width:2}
+.ch .va{fill:none;stroke:var(--accent);stroke-width:2.4}
+.ch .dtr{fill:var(--muted)}
+.ch .dva{fill:var(--accent)}
+.ch .tr-t{fill:var(--muted)}
+.ch .va-t{fill:var(--accent)}
+.ch .mkl{fill:none;stroke:var(--accent);stroke-width:1;stroke-dasharray:3 3}
+</style>
+<rect class="bgfill" x="0" y="0" width="960" height="400"/>
+
+<title id="arch-t">Model architecture</title>
+<desc id="arch-d">A batch of 32 images, each 224 by 224 pixels with 3 colour channels and values from 0 to 1, goes into the MobileNetV2 base from TensorFlow Hub, mobilenet_v2_130_224 classification version 4. The base is frozen and has 5,432,713 parameters that are not trained. It outputs 1001 ImageNet class scores per image. A dense layer with 120 units and softmax, the only trained part with 120,240 parameters, turns those into 120 breed probabilities. The highest probability gives the breed label. Training uses the Adam optimiser, categorical focal cross-entropy loss, accuracy as the metric, TensorBoard logging and early stopping on validation accuracy with patience 5. The model has 5,552,953 parameters in total.</desc>
+<defs>
+<marker id="am" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="mk"/></marker>
+<marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="mk-a"/></marker>
+</defs>
+<rect class="bx" x="20" y="96" width="170" height="104" rx="8"/>
+<text class="t" x="32" y="122">Input batch</text>
+<text class="ts" x="32" y="144">32 × 224 × 224 × 3</text>
+<text class="ts" x="32" y="162">float32, values 0–1</text>
+<text class="ts" x="32" y="180">shape [None,224,224,3]</text>
+<path class="ln" d="M190,148 H226" marker-end="url(#am)"/>
+
+<rect class="grp-m" x="230" y="40" width="330" height="216" rx="12"/>
+<text class="tt" x="246" y="66">MobileNetV2 base · frozen</text>
+<text class="ts" x="246" y="86">TensorFlow Hub · ImageNet weights</text>
+<rect class="bx" x="246" y="100" width="298" height="58" rx="8"/>
+<text class="t" x="258" y="123">hub.KerasLayer(trainable=False)</text>
+<text class="ts" x="258" y="143">mobilenet_v2_130_224/classification/4</text>
+<rect class="bx" x="246" y="168" width="145" height="72" rx="8"/>
+<text class="t" x="258" y="192">5,432,713</text>
+<text class="ts" x="258" y="210">parameters</text>
+<text class="ts" x="258" y="226">not trained</text>
+<rect class="bx" x="399" y="168" width="145" height="72" rx="8"/>
+<text class="t" x="411" y="192">Output 1001</text>
+<text class="ts" x="411" y="210">ImageNet class</text>
+<text class="ts" x="411" y="226">scores per image</text>
+
+<path class="ln-a" d="M560,148 H596" marker-end="url(#aa)"/>
+<text class="ts mid" x="578" y="138">1001</text>
+<rect class="bx-a" x="600" y="86" width="170" height="124" rx="8"/>
+<text class="t" x="612" y="110">Dense head · trained</text>
+<text class="ts" x="612" y="132">120 units, softmax</text>
+<text class="ts" x="612" y="150">120,240 parameters</text>
+<text class="ts" x="612" y="168">= 1001 × 120 + 120</text>
+<text class="ts ta" x="612" y="190">only trained part</text>
+<path class="ln" d="M770,148 H806" marker-end="url(#am)"/>
+<rect class="bx" x="810" y="96" width="130" height="104" rx="8"/>
+<text class="t" x="822" y="122">Prediction</text>
+<text class="ts" x="822" y="144">120 breed</text>
+<text class="ts" x="822" y="160">probabilities</text>
+<text class="ts" x="822" y="180">argmax → label</text>
+
+<rect class="grp" x="20" y="284" width="920" height="72" rx="12"/>
+<text class="tt" x="36" y="310">How it is trained</text>
+<text class="ts" x="36" y="332">optimiser: Adam (default settings) · loss: CategoricalFocalCrossentropy · metric: accuracy</text>
+<text class="ts" x="36" y="348">callbacks: TensorBoard logs · EarlyStopping(monitor=val_accuracy, patience=5) · up to 200 epochs</text>
+
+<rect class="grp-m" x="20" y="372" width="34" height="16" rx="4"/><text class="ts" x="62" y="384">frozen, pre-trained</text>
+<rect class="bx-a" x="230" y="372" width="34" height="16" rx="4"/><text class="ts" x="272" y="384">trained in this project</text>
+<text class="ts end" x="940" y="384">total 5,552,953 parameters, 2.2% trained</text>
+</svg>

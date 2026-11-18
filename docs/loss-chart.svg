@@ -1,0 +1,106 @@
+<svg viewBox="0 0 400 280" role="img" aria-labelledby="chl-t chl-d" xmlns="http://www.w3.org/2000/svg" class="dg ch" width="400" height="280">
+<style>
+:root{--bg:#F3F2EE;--fg:#1D1F22;--muted:#5E636A;--line:#D9D7D0;--card:#FFFFFF;--accent:#2E6F68;--flag:#B4543C;
+--f-head:"Schibsted Grotesk","Segoe UI",system-ui,sans-serif;--f-body:"Source Serif 4",Georgia,serif;--f-mono:"JetBrains Mono",ui-monospace,Consolas,monospace;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141617;--fg:#E4E4DF;--muted:#9AA0A6;--line:#2C2F32;--card:#1C1F21;--accent:#7FC3B9;--flag:#E58A6E;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#141617;--fg:#E4E4DF;--muted:#9AA0A6;--line:#2C2F32;--card:#1C1F21;--accent:#7FC3B9;--flag:#E58A6E;color-scheme:dark}
+.bgfill{fill:var(--card)}
+.dg .grp{fill:none;stroke:var(--line);stroke-width:1.5}
+.dg .grp-c{fill:var(--flag);fill-opacity:.06;stroke:var(--flag);stroke-width:1.5;stroke-dasharray:6 5}
+.dg .grp-l{fill:var(--accent);fill-opacity:.06;stroke:var(--accent);stroke-width:1.5}
+.dg .grp-m{fill:var(--muted);fill-opacity:.08;stroke:var(--muted);stroke-width:1.5;stroke-dasharray:4 4}
+.dg .bx{fill:var(--bg);stroke:var(--line);stroke-width:1.2}
+.dg .bx-a{fill:var(--accent);fill-opacity:.14;stroke:var(--accent);stroke-width:1.5}
+.dg .bx-c{fill:var(--flag);fill-opacity:.08;stroke:var(--flag);stroke-width:1.4;stroke-dasharray:5 4}
+.dg .lane{fill:var(--bg);fill-opacity:.5;stroke:var(--line);stroke-width:1}
+.dg .lane2{fill:none;stroke:var(--line);stroke-width:1}
+.dg text{font-family:var(--f-head);fill:var(--fg)}
+.dg .tt{font-size:15px;font-weight:700}
+.dg .t{font-size:13.5px;font-weight:600}
+.dg .ts{font-family:var(--f-mono);font-size:11px;fill:var(--muted)}
+.dg .tc{fill:var(--flag)}
+.dg .ta{fill:var(--accent)}
+.dg .mid{text-anchor:middle}
+.dg .end{text-anchor:end}
+.dg .ln{fill:none;stroke:var(--muted);stroke-width:1.5}
+.dg .ln-a{fill:none;stroke:var(--accent);stroke-width:1.6}
+.dg .ln-c{fill:none;stroke:var(--flag);stroke-width:1.6;stroke-dasharray:6 4}
+.dg .mk{fill:var(--muted)}
+.dg .mk-a{fill:var(--accent)}
+.dg .mk-c{fill:var(--flag)}
+.ch text{font-family:var(--f-head);fill:var(--muted);font-size:11.5px}
+.ch .tk{font-family:var(--f-mono)}
+.ch .lb{font-weight:600}
+.ch .mid{text-anchor:middle}
+.ch .end{text-anchor:end}
+.ch .gd{fill:none;stroke:var(--line);stroke-width:1}
+.ch .ax{fill:none;stroke:var(--muted);stroke-width:1}
+.ch .tr{fill:none;stroke:var(--muted);stroke-width:2}
+.ch .va{fill:none;stroke:var(--accent);stroke-width:2.4}
+.ch .dtr{fill:var(--muted)}
+.ch .dva{fill:var(--accent)}
+.ch .tr-t{fill:var(--muted)}
+.ch .va-t{fill:var(--accent)}
+.ch .mkl{fill:none;stroke:var(--accent);stroke-width:1;stroke-dasharray:3 3}
+</style>
+<rect class="bgfill" x="0" y="0" width="400" height="280"/>
+
+<title id="chl-t">Loss per epoch, Model 6</title>
+<desc id="chl-d">Training and validation focal loss for the 19 epochs of Model 6, from the notebook training log. Training loss falls from 0.303 to under 0.002 by epoch 12, then jumps to 0.033 at epoch 17. Validation loss is lowest at 0.116 in epoch 5, then rises to 0.209 at epoch 17 and ends at 0.200.</desc>
+<path class="gd" d="M56,224.0 H384"/><text class="tk end" x="50" y="228.0">0.0</text>
+<path class="gd" d="M56,164.6 H384"/><text class="tk end" x="50" y="168.6">0.1</text>
+<path class="gd" d="M56,105.2 H384"/><text class="tk end" x="50" y="109.2">0.2</text>
+<path class="gd" d="M56,45.9 H384"/><text class="tk end" x="50" y="49.9">0.3</text>
+<path class="ax" d="M56,224 H384"/>
+<text class="tk mid" x="56.0" y="242">1</text>
+<text class="tk mid" x="128.9" y="242">5</text>
+<text class="tk mid" x="220.0" y="242">10</text>
+<text class="tk mid" x="292.9" y="242">14</text>
+<text class="tk mid" x="384.0" y="242">19</text>
+<text class="tk mid" x="220" y="262">epoch</text>
+<polyline class="tr" points="56.0,44.4 74.2,189.6 92.4,209.9 110.7,217.5 128.9,220.6 147.1,221.8 165.3,222.4 183.6,222.8 201.8,222.8 220.0,222.8 238.2,222.9 256.4,223.1 274.7,223.3 292.9,223.5 311.1,223.3 329.3,221.8 347.6,204.5 365.8,207.3 384.0,218.7"/>
+<circle class="dtr" cx="56.0" cy="44.4" r="2.4"/>
+<circle class="dtr" cx="74.2" cy="189.6" r="2.4"/>
+<circle class="dtr" cx="92.4" cy="209.9" r="2.4"/>
+<circle class="dtr" cx="110.7" cy="217.5" r="2.4"/>
+<circle class="dtr" cx="128.9" cy="220.6" r="2.4"/>
+<circle class="dtr" cx="147.1" cy="221.8" r="2.4"/>
+<circle class="dtr" cx="165.3" cy="222.4" r="2.4"/>
+<circle class="dtr" cx="183.6" cy="222.8" r="2.4"/>
+<circle class="dtr" cx="201.8" cy="222.8" r="2.4"/>
+<circle class="dtr" cx="220.0" cy="222.8" r="2.4"/>
+<circle class="dtr" cx="238.2" cy="222.9" r="2.4"/>
+<circle class="dtr" cx="256.4" cy="223.1" r="2.4"/>
+<circle class="dtr" cx="274.7" cy="223.3" r="2.4"/>
+<circle class="dtr" cx="292.9" cy="223.5" r="2.4"/>
+<circle class="dtr" cx="311.1" cy="223.3" r="2.4"/>
+<circle class="dtr" cx="329.3" cy="221.8" r="2.4"/>
+<circle class="dtr" cx="347.6" cy="204.5" r="2.4"/>
+<circle class="dtr" cx="365.8" cy="207.3" r="2.4"/>
+<circle class="dtr" cx="384.0" cy="218.7" r="2.4"/>
+<polyline class="va" points="56.0,150.4 74.2,153.8 92.4,154.5 110.7,153.5 128.9,154.9 147.1,154.8 165.3,153.6 183.6,153.8 201.8,153.2 220.0,151.7 238.2,151.3 256.4,150.1 274.7,148.8 292.9,149.2 311.1,148.0 329.3,129.0 347.6,99.8 365.8,104.5 384.0,105.2"/>
+<circle class="dva" cx="56.0" cy="150.4" r="2.4"/>
+<circle class="dva" cx="74.2" cy="153.8" r="2.4"/>
+<circle class="dva" cx="92.4" cy="154.5" r="2.4"/>
+<circle class="dva" cx="110.7" cy="153.5" r="2.4"/>
+<circle class="dva" cx="128.9" cy="154.9" r="2.4"/>
+<circle class="dva" cx="147.1" cy="154.8" r="2.4"/>
+<circle class="dva" cx="165.3" cy="153.6" r="2.4"/>
+<circle class="dva" cx="183.6" cy="153.8" r="2.4"/>
+<circle class="dva" cx="201.8" cy="153.2" r="2.4"/>
+<circle class="dva" cx="220.0" cy="151.7" r="2.4"/>
+<circle class="dva" cx="238.2" cy="151.3" r="2.4"/>
+<circle class="dva" cx="256.4" cy="150.1" r="2.4"/>
+<circle class="dva" cx="274.7" cy="148.8" r="2.4"/>
+<circle class="dva" cx="292.9" cy="149.2" r="2.4"/>
+<circle class="dva" cx="311.1" cy="148.0" r="2.4"/>
+<circle class="dva" cx="329.3" cy="129.0" r="2.4"/>
+<circle class="dva" cx="347.6" cy="99.8" r="2.4"/>
+<circle class="dva" cx="365.8" cy="104.5" r="2.4"/>
+<circle class="dva" cx="384.0" cy="105.2" r="2.4"/>
+<path class="mkl" d="M128.9,148.9 V69.6"/>
+<text class="lb va-t" x="124.9" y="63.6">lowest 0.116 (epoch 5)</text>
+<text class="lb va-t end" x="384.0" y="95.2">0.200</text>
+<text class="lb tr-t" x="62" y="22">training</text>
+<text class="lb va-t" x="146" y="22">validation</text>
+</svg>
